@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        $( document ).ready(function() {
+            console.log("parser.getResult()");
+            var parser = new UAParser(); 
+            console.log(parser.getResult()); 
+            var sistemaOperativo = parser.getResult().os.name;
+            var VersionSistemaOperativo = parser.getResult().os.version;
+            alert('Sistema Operativo: ' + sistemaOperativo+' '+ VersionSistemaOperativo + '\n');
+            console.log(sistemaOperativo);
+        });
+    
+    </script>
+</body>
+</html>
